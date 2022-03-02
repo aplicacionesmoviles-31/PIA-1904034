@@ -1,0 +1,9 @@
+.card {
+    padding: 20px;
+    transition: all 0.2s ease;
+}
+
+.card:hover {
+    opacity: 0.9;
+    transform: scale(0.95);
+}

@@ -1,0 +1,18 @@
+<h1>Angular Basico 1904034</h1>
+<h3>Creando mi primera aplicacion con Angular JS</h3>
+
+<ion-app>
+ <ion-content>
+  <p *ngFor="let imagen of imagenes">
+    <ion-card class="card">
+      <ion-card-content>
+        <img src="{{imagen}}" alt="">
+      </ion-card-content>
+    </ion-card>
+  </p>
+ </ion-content>
+</ion-app>
+
+<p *ngIf="ingles">
+  hello, world!
+</p>
