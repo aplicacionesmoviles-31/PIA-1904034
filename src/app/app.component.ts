@@ -9,9 +9,9 @@ export class AppComponent {
   title = 'Hola, mundo!';
 
   imagenes = [
-    "../assets/imagenes/cheems.jpeg",
-    "../assets/imagenes/amsiedad.webp",
-    "../assets/imagenes/meme-perrillo.jpeg"
+    "../assets/imagenes/mapache_chiquito.jpg",
+    "../assets/imagenes/mapache_gordo.jpg",
+    "../assets/imagenes/mapache_pizza.jpg"
   ];
 
   ingles = false;

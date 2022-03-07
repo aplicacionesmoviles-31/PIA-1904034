@@ -1,10 +1,15 @@
+
+<!--Titulo-->
 <h1>Angular Basico 1904034</h1>
 <h3>Creando mi primera aplicacion con Angular JS</h3>
 
+<!--Tarjetas con imagenes-->
 <ion-app>
  <ion-content>
   <p *ngFor="let imagen of imagenes">
     <ion-card class="card">
+      <h1>Mapache</h1>
+      <p>{{imagen}}</p>
       <ion-card-content>
         <img src="{{imagen}}" alt="">
       </ion-card-content>
@@ -13,6 +18,7 @@
  </ion-content>
 </ion-app>
 
+<!--Mensaje en caso de que el idioma predeterminado de la pagina sea en ingles-->
 <p *ngIf="ingles">
   hello, world!
 </p>
