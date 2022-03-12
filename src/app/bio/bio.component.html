@@ -1,0 +1,68 @@
+<ion-grid>
+    <ion-row size="12">
+        <ion-col size="4">
+            <button (click)="enviarMensaje()">
+                <ion-icon name="chatbox-ellipses"></ion-icon>
+            </button>
+        </ion-col>
+        <ion-col size="4">
+            <ion-row>
+                <div class="photo_container">
+                    <img src="{{usuario.fotoPerfil}}" alt="Foto de perfil">
+                </div>
+            </ion-row>
+            <ion-row>
+                <p class="username">{{usuario.alias}}</p>
+            </ion-row>
+        </ion-col>
+        <ion-col size="4">
+            <button (click)="seguir()">
+                <div class="background-btn" *ngIf="siguiendo" style="background: rgb(209, 94, 255)">
+                    <ion-icon name="heart" style="color: #fff"></ion-icon>
+                </div>
+                <div class="background-btn" *ngIf="!siguiendo">
+                    <ion-icon name="heart"></ion-icon>
+                </div>
+            </button>
+        </ion-col>
+    </ion-row>
+
+    <ion-row class="stats">
+        <ion-col>
+            <p>20</p>
+            <p>Publicaciones</p>
+        </ion-col>
+        <ion-col>
+            <p>{{usuario.seguidores}}</p>
+            <p>Seguidores</p>
+        </ion-col>
+        <ion-col>
+            <p>{{usuario.seguidores}}</p>
+            <p>Siguiendo</p>
+        </ion-col>
+    </ion-row>
+
+    <ion-row class="buttons">
+        <ion-col>
+            <button class="primario">
+                E-mail
+            </button>
+        </ion-col>
+        <ion-col>
+            <button class="secundario">
+                Opciones
+            </button>
+        </ion-col>
+    </ion-row>
+
+    <ion-col *ngIf="editandoMensaje" class="mensaje_container">
+        <ion-row>
+            <input type="text" placeholder="Escribe un mensaje..." id="txtmsg">
+        </ion-row>
+        <ion-row>
+            <button class="primario">
+                Enviar
+            </button>
+        </ion-row>
+    </ion-col>
+</ion-grid>

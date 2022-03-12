@@ -1,0 +1,32 @@
+#galeria {
+    position: relative;
+    top: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: rgb(253, 250, 255);
+}
+
+#galeria ion-row ion-col {
+    margin: 2px;
+    padding: 0;
+    box-sizing: border-box;
+}
+img.galeria {
+    /*Establecer la plantilla del grid que solo tenga 2 columnas*/
+    width: 125px;
+    height: 125px;
+    border-radius: 10px;
+    transition: all 0.5s ease;
+}
+
+img.galeria:hover {
+    transform: scale(1.05);
+    opacity: 0.95;
+}
+
+ion-row, ion-col{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

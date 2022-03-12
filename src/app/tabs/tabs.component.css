@@ -1,0 +1,19 @@
+ion-icon {
+    color: #000;
+}
+
+ion-tab-bar {
+    background: rgb(253, 250, 255);
+}
+
+a {
+    width: 170px;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+ion-icon {
+    color: #333;
+}

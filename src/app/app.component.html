@@ -1,25 +1,26 @@
-<!--Tarjetas con imagenes-->
 <ion-app>
-  <!--Titulo-->
-  <div class="container">
-    <h1 class="title">Angular Basico 1904034</h1>
-    <h3 class="title">Creando mi primera aplicacion con Angular JS</h3>
-  </div>
+  <ion-content>
+    <router-outlet></router-outlet>
+    <header>
+      <nav>
+        <ul>
+          <li>
+            <a routerLink="/feed" class="name_app">Instafan</a>
+          </li>
+          <li>
+            <button class="settings">
+              <ion-icon name="settings"></ion-icon>
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </header>
 
- <ion-content>
-  <p *ngFor="let imagen of imagenes">
-    <ion-card class="card">
-      <h1>Mapache</h1>
-      <p>{{imagen}}</p>
-      <ion-card-content>
-        <img src="{{imagen}}" alt="">
-      </ion-card-content>
-    </ion-card>
-  </p>
- </ion-content>
-</ion-app>
-
-<!--Mensaje en caso de que el idioma predeterminado de la pagina sea en ingles-->
-<p *ngIf="ingles">
-  hello, world!
-</p>
+    <app-tabs></app-tabs>
+  </ion-content>
+ </ion-app>
+ 
+ 
+ <p *ngIf="ingles">
+   hello, world!
+ </p>

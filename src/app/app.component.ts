@@ -7,12 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Hola, mundo!';
-
-  imagenes = [
-    "../assets/imagenes/mapache_chiquito.jpg",
-    "../assets/imagenes/mapache_gordo.jpg",
-    "../assets/imagenes/mapache_pizza.jpg"
-  ];
-
+  grid = true;
   ingles = false;
+  
+  toggleGrid(): void {
+    this.grid = !this.grid;
+  }
+
+  
 }
