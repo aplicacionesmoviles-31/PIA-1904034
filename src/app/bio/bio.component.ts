@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import swal from 'sweetalert';
 
 @Component({
   selector: 'app-bio',
@@ -35,6 +36,10 @@ export class BioComponent implements OnInit {
     this.editandoMensaje = !this.editandoMensaje;
   }
 
+  enviar():void {
+    swal("Enviado", "Mensaje enviado correctamente", "success");
+  }
+
   enviarEmail(): void {
 
   }
@@ -42,6 +47,4 @@ export class BioComponent implements OnInit {
   desplegarOpciones(): void {
     //En proceso
   }
-
-
 }

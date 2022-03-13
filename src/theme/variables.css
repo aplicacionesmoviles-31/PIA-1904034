@@ -13,3 +13,13 @@
 	--ion-color-secondary-shade: #e6e6e6;
 	--ion-color-secondary-tint: #e6e6e6;
 }
+
+
+.swal-button {
+    background-color:rgb(209, 94, 255);
+    color: #fff;
+}
+
+.swal-button:hover {
+	background-color: rgb(209, 94, 255);
+}
