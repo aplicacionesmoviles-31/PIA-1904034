@@ -4,8 +4,19 @@
     box-sizing: border-box;
 }
 
+app-bio {
+    height: auto;
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+
 ion-grid {
     margin-top: 60px;
+    background: rgb(253, 250, 255);
+}
+
+body {
     background: rgb(253, 250, 255);
 }
 
@@ -53,7 +64,9 @@ button {
 }
 
 button:hover .background-btn, button:hover {
-    background: rgb(209, 94, 255);
+    background: linear-gradient(to right, rgb(255, 113, 196), rgb(209, 94, 255));
+    box-shadow: 15px 15px 30px rgba(142, 113, 150, 0.3),
+                -10px -10px 20px #fff;
 }
 
 button:hover .background-btn ion-icon, button:hover ion-icon {
@@ -73,7 +86,6 @@ button:hover .background-btn ion-icon, button:hover ion-icon {
 ion-icon {
     font-size: 1.5rem;
     color: #bbb;
-    transition: all 1s ease;
 }
 
 ion-grid ion-row:nth-child(2){
@@ -103,7 +115,7 @@ ion-row:nth-child(2) ion-col p:nth-child(1) {
     border-radius: 10px;
     font-size: 1rem;
     color: #fff;
-    background: rgb(209, 94, 255);
+    background: linear-gradient(to right, rgb(255, 113, 196), rgb(209, 94, 255));
 }
 
 .secundario {
@@ -120,8 +132,14 @@ ion-row:nth-child(2) ion-col p:nth-child(1) {
 }
 
 .secundario:hover {
-    background: rgb(255, 113, 196);
+    background: linear-gradient(to right, rgb(255, 113, 196), rgb(209, 94, 255));
     color: #fff;
+}
+
+.primario:hover, .secundario:hover {
+    box-shadow: 15px 15px 30px rgba(142, 113, 150, 0.4),
+                -10px -10px 20px #fff,
+                inset 0 -50px 0 rgba(255,255,255,0.2);
 }
 
 .buttons {
@@ -147,6 +165,7 @@ ion-row:nth-child(2) ion-col p:nth-child(1) {
 
 .mensaje_container ion-row input {
     width: 90%;
+    background: rgb(253, 250, 255);
     height: 40px;
     color: #333;
     border: none;
@@ -155,6 +174,10 @@ ion-row:nth-child(2) ion-col p:nth-child(1) {
     border-radius: 10px;
     box-shadow: inset 5px 5px 10px rgba(142, 113, 150, 0.1);
     outline: none;
+}
+
+.heart {
+    color: #fff;
 }
 
 @keyframes bubble {

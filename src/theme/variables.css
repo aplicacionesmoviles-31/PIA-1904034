@@ -1,3 +1,7 @@
+body {
+	background: rgb(253, 250, 255);
+}
+
 :root {
     --ion-color-primary: #0099ff;
 	--ion-color-primary-rgb: 153,0,255;
@@ -16,7 +20,7 @@
 
 
 .swal-button {
-    background-color:rgb(209, 94, 255);
+    background: linear-gradient(45deg, rgb(255, 113, 196), rgb(209, 94, 255));
     color: #fff;
 }
 

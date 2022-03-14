@@ -73,6 +73,9 @@ header nav ul li a {
     border-radius: 25px;
     background: rgb(253, 250, 255);
     transition: all 1s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 ion-icon {
@@ -82,9 +85,16 @@ ion-icon {
 }
 
 .settings:hover {
-    background: rgb(209, 94, 255);
+    background: linear-gradient(45deg, rgb(255, 113, 196), rgb(209, 94, 255));
+    animation: rotar 1s ease;
 }
 
 .settings:hover ion-icon {
     color: #fff;
+}
+
+@keyframes rotar {
+    100% {
+        transform: rotate(360deg);
+    }
 }
