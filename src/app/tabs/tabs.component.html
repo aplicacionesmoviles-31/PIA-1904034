@@ -1,10 +1,10 @@
 <ion-tabs>
     <ion-tab-bar slot="bottom">
         <a routerLink="/feed" (click)="tab_location('feed')">
-          <ion-tab-button tab="home" *ngIf="!seleccion_feed">
+          <ion-tab-button tab="feed" *ngIf="!seleccion_feed">
             <ion-icon name="home-outline"></ion-icon>
           </ion-tab-button>
-          <ion-tab-button tab="home" *ngIf="seleccion_feed">
+          <ion-tab-button tab="feed" *ngIf="seleccion_feed">
             <ion-icon name="home"></ion-icon>
           </ion-tab-button>
         </a>
