@@ -5,7 +5,7 @@
     color: #333;
 }
 
-ion-grid {
+.grid {
     margin-top: 60px;
     background: rgb(253, 250, 255);
     overflow: scroll;

@@ -1,17 +1,7 @@
 <ion-grid id="galeria">
     <ion-row >
         <ion-col *ngFor="let publicacion of usuario.publicaciones">
-            <img src="{{publicacion}}" alt="" class="galeria">
-        </ion-col>
-    </ion-row>
-    <ion-row >
-        <ion-col *ngFor="let publicacion of usuario.publicaciones">
-            <img src="{{publicacion}}" alt="" class="galeria">
-        </ion-col>
-    </ion-row>
-    <ion-row >
-        <ion-col *ngFor="let publicacion of usuario.publicaciones">
-            <img src="{{publicacion}}" alt="" class="galeria">
+            <img [src]="publicacion.imagen" alt="" class="galeria" [routerLink]="['/publicacion', publicacion.id]">
         </ion-col>
     </ion-row>
 </ion-grid>

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-tabs',
@@ -11,19 +13,6 @@ export class TabsComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-  }
-
-  seleccion_perfil = true;
-  seleccion_feed = false;
-
-  tab_location(pagina: string):void {
-    if (pagina == "perfil") {
-      this.seleccion_perfil = true;
-      this.seleccion_feed = false;
-    } else {
-      this.seleccion_perfil = false;
-      this.seleccion_feed = true;
-    }
   }
 
 }

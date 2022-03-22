@@ -1,18 +1,12 @@
 <ion-tabs>
     <ion-tab-bar slot="bottom">
-        <a routerLink="/feed" (click)="tab_location('feed')">
-          <ion-tab-button tab="feed" *ngIf="!seleccion_feed">
-            <ion-icon name="home-outline"></ion-icon>
-          </ion-tab-button>
-          <ion-tab-button tab="feed" *ngIf="seleccion_feed">
+        <a routerLink="/feed">
+          <ion-tab-button tab="feed">
             <ion-icon name="home"></ion-icon>
           </ion-tab-button>
         </a>
-        <a routerLink="/perfil" (click)="tab_location('perfil')">
-          <ion-tab-button tab="profile" *ngIf="!seleccion_perfil">
-            <ion-icon name="person-outline"></ion-icon>
-          </ion-tab-button>
-          <ion-tab-button tab="profile" *ngIf="seleccion_perfil">
+        <a routerLink="/perfil">
+          <ion-tab-button tab="profile">
             <ion-icon name="person"></ion-icon>
           </ion-tab-button>
         </a>

@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { HttpClient } from '@angular/common/http'
 import swal from 'sweetalert';
 
 @Component({
@@ -6,12 +7,27 @@ import swal from 'sweetalert';
   templateUrl: './feed.component.html',
   styleUrls: ['./feed.component.css']
 })
+
 export class FeedComponent implements OnInit {
   
-  constructor() { }
+  constructor(
+    private http: HttpClient
+  ) { }
 
+  // Respuestas de la base de datos
+  resPublicaciones: any = [];
+
+  // Inicializar publicaciones
   ngOnInit(): void {
-    
+    this.getPublicaciones().subscribe(res => {
+      this.resPublicaciones = res;
+    }
+    );
+  }
+
+  // Obtener las publicaciones
+  getPublicaciones() {
+    return this.http.get('https://insta-ionic-1904034-default-rtdb.firebaseio.com/publicaciones.json')
   }
 
   @Input() comentario: string = '';
@@ -26,37 +42,12 @@ export class FeedComponent implements OnInit {
     fotoPerfil: "https://media1.tenor.com/images/c0dbc6c2c624e781eb48d255ffca9a7f/tenor.gif?itemid=13016571",
     nombre: "Azt3kCode"
   }
-  
-  publicaciones = [ {
-    "usuario": "Angelspartan01",
-    "imagen": "https://i.pinimg.com/originals/f9/13/57/f9135788c6aeeec438abb986f283936c.gif",
-    "caption": "Awesome!",
-    "comentario": ""
-  },
-  {
-    "usuario": "DavJT",
-    "imagen": "https://media1.tenor.com/images/728b1bf7d68319216cc3d889d8d4464a/tenor.gif?itemid=14799468",
-    "caption": "Me da amsiedad...",
-    "comentario": ""
-  },
-  {
-    "usuario": "Bazz",
-    "imagen": "https://th.bing.com/th/id/R.42455498933d57e8af7156813472d0fa?rik=ZY14wlbzBPkQ%2bA&pid=ImgRaw&r=0",
-    "caption": "Unos perrillos :( ",
-    "comentario": ""
-  }
-  ];
 
-  like = false;
-  bookmark = false;
-
-  likePost(): void {
-    this.like = !this.like;
+  likePost(id: string): void {
+    
   }
 
-  bookmarkPost(): void {
-    this.bookmark = !this.bookmark;
+  bookmarkPost(id: string): void {
+    
   }
-
-
 }

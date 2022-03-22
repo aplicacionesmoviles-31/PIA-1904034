@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 import swal from 'sweetalert';
 
 @Component({
@@ -8,25 +9,31 @@ import swal from 'sweetalert';
 })
 export class BioComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private http: HttpClient
+  ) { }
 
+  // Respuestas de la base de datos
+  resUsuario: any = [];
+
+  // Inicializar publicaciones
   ngOnInit(): void {
+    this.getUsuario().subscribe(res => {
+      this.resUsuario = res;
+    }
+    );
   }
 
-  txtmsg = document.getElementById("txtmsg");
+  // Obtener las publicaciones
+  getUsuario() {
+    return this.http.get('https://insta-ionic-1904034-default-rtdb.firebaseio.com/usuario.json')
+  }
+
+  txtmsg: any = document.getElementById("txtmsg");
   siguiendo = false;
 
   editandoMensaje= false;
   editandoCorreo = false;
-
-  usuario = {
-    "nombre":"Max",
-    "alias": "@Azt3kCode",
-    "fotoPerfil": "https://media1.tenor.com/images/c0dbc6c2c624e781eb48d255ffca9a7f/tenor.gif?itemid=13016571",
-    "seguidores": 20000,
-    "seguidos": 1,
-    "bio": "Guau", 
-  }
 
   seguir(): void {
     this.siguiendo = !this.siguiendo;
@@ -35,7 +42,7 @@ export class BioComponent implements OnInit {
   enviarMensaje(): void {
     this.editandoMensaje = !this.editandoMensaje;
   }
-
+  
   enviar():void {
     swal("Enviado", "Mensaje enviado correctamente", "success");
   }

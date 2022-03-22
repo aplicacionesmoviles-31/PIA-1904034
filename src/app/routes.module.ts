@@ -6,19 +6,20 @@ import { Routes, RouterModule } from '@angular/router';
 import  { FeedComponent } from './feed/feed.component';
 import { PerfilComponent } from './perfil/perfil.component';
 import { TabsComponent } from './tabs/tabs.component';
+import { PublicacionComponent } from './publicacion/publicacion.component';
 
 const routes: Routes = [
-  /*{ path: 'feed', component: FeedComponent },
-  { path: 'perfil', component: PerfilComponent }*/
   { 
     path: 'feed',
     component: FeedComponent,
-    loadChildren: () => import('./feed/feed.module').then(m => m.FeedModule)
   },
   {
     path: 'perfil',
     component: PerfilComponent,
-    loadChildren: () => import('./perfil/perfil.module').then(m => m.PerfilModule)
+  },
+  { 
+    path: 'publicacion/:id',
+    component: PublicacionComponent,
   }
 ];
 

@@ -1,0 +1,69 @@
+{
+    "publicaciones": [{
+        "fotoPerfil": "https://media1.tenor.com/images/c0dbc6c2c624e781eb48d255ffca9a7f/tenor.gif?itemid=13016571",
+        "usuario": "Angelspartan01",
+        "imagen": "https://i.pinimg.com/originals/f9/13/57/f9135788c6aeeec438abb986f283936c.gif",
+        "caption": "Awesome!",
+        "comentario": "",
+        "id": "1",
+        "like": "",
+        "bookmark": ""
+    },
+    {
+        "fotoPerfil": "https://media1.tenor.com/images/c0dbc6c2c624e781eb48d255ffca9a7f/tenor.gif?itemid=13016571",
+        "usuario": "DavJT",
+        "imagen": "https://media1.tenor.com/images/728b1bf7d68319216cc3d889d8d4464a/tenor.gif?itemid=14799468",
+        "caption": "This is great!",
+        "comentario": "",
+        "id": "2",
+        "like": "",
+        "bookmark": ""
+    },
+    {
+        "fotoPerfil": "https://media1.tenor.com/images/c0dbc6c2c624e781eb48d255ffca9a7f/tenor.gif?itemid=13016571",
+        "usuario": "Bazz",
+        "imagen": "https://th.bing.com/th/id/R.42455498933d57e8af7156813472d0fa?rik=ZY14wlbzBPkQ%2bA&pid=ImgRaw&r=0",
+        "caption": "Beautiful!",
+        "comentario": "",
+        "id": "3",
+        "like": "",
+        "bookmark": ""
+    }],
+    "usuario": {
+        "nombre":"Azt3kCode",
+        "alias": "@Azt3kCode",
+        "fotoPerfil": "https://media1.tenor.com/images/c0dbc6c2c624e781eb48d255ffca9a7f/tenor.gif?itemid=13016571",
+        "seguidores": "20000",
+        "seguidos": "256",
+        "bio": ". . .", 
+        "publicaciones": [
+        { 
+            "usuario": "",
+            "imagen": "https://i.pinimg.com/originals/f9/13/57/f9135788c6aeeec438abb986f283936c.gif",
+            "caption": "",
+            "comentario": "",
+            "id": "1",
+            "like": "",
+            "bookmark": ""
+        },
+        { 
+            "usuario": "",
+            "imagen": "https://media1.tenor.com/images/728b1bf7d68319216cc3d889d8d4464a/tenor.gif?itemid=14799468",
+            "caption": "",
+            "comentario": "",
+            "id": "2",
+            "like": "",
+            "bookmark": ""
+        },
+        { 
+            "usuario": "",
+            "imagen": "https://th.bing.com/th/id/R.42455498933d57e8af7156813472d0fa?rik=ZY14wlbzBPkQ%2bA&pid=ImgRaw&r=0",
+            "caption": "",
+            "comentario": "",
+            "id": "3",
+            "like": "",
+            "bookmark": ""
+        }
+    ]
+    }
+}

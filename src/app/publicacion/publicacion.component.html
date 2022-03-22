@@ -1,0 +1,54 @@
+<div class="grid" [routerLink]="['/publicacionDetalle', publicacionDetalle.id]">
+    <ion-row class="info">
+        <ion-col size="2">
+            <div class="foto_container" routerLink="/perfil">
+                <img src="{{publicacionDetalle.fotoPerfil}}" alt="" class="usuario_foto">
+            </div>
+        </ion-col>
+        <ion-col size="9" class="usuario_nombre">
+            {{usuario}}
+        </ion-col>
+        <ion-col class="points">
+            <ion-icon name="ellipsis-vertical"></ion-icon>
+        </ion-col>
+    </ion-row>
+    <ion-row>
+        <ion-col class="publicacion_img">
+            <img src="{{publicacionDetalle.imagen}}" alt="">
+        </ion-col>
+    </ion-row>
+    <ion-row>
+        <ion-col size="1" class="reaccion_icon" (click)="likePost()">
+            <ion-icon name="heart-outline" *ngIf="!like"></ion-icon>
+            <ion-icon name="heart" *ngIf="like" class="like"></ion-icon>
+        </ion-col>
+        <ion-col size="1" class="reaccion_icon">
+            <ion-icon name="chatbubbles-outline"></ion-icon>
+        </ion-col>
+        <ion-col size="8.8" class="reaccion_icon">
+            <ion-icon name="share-outline"></ion-icon>
+        </ion-col>
+        <ion-col size="1" class="reaccion_icon" (click)="bookmarkPost()"> 
+            <ion-icon name="bookmark-outline" *ngIf="!bookmark"></ion-icon>
+            <ion-icon name="bookmark" *ngIf="bookmark" class="bookmark"></ion-icon>
+        </ion-col>
+    </ion-row>
+    <ion-row>
+        <ion-col class="comentarios">
+            <p><strong>20,000 Me gusta</strong></p>
+            <p><strong>{{publicacionDetalle.usuario}}</strong> {{publicacionDetalle.caption}}</p>
+            <div>
+                {{publicacionDetalle.comentario}}
+            </div>
+        </ion-col>
+    </ion-row>
+    <ion-row>
+        <ion-col>
+            <img src="{{publicacionDetalle.fotoPerfil}}" class="comentario_perfil" alt="">
+        </ion-col>
+        <input type="text" [(ngModel)]="publicacionDetalle.comentario" class="comentario_input" placeholder="Escribe un comentario..." >
+        <button (click)="postComment(publicacionDetalle.comentario, publicacionDetalle)" class="comentario_btn">
+            <ion-icon name="send"></ion-icon>
+        </button>
+    </ion-row>
+</div>

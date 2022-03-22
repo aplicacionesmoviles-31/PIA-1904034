@@ -8,11 +8,11 @@
         <ion-col size="4">
             <ion-row>
                 <div class="photo_container">
-                    <img src="{{usuario.fotoPerfil}}" alt="Foto de perfil">
+                    <img src="{{resUsuario.fotoPerfil}}" alt="Foto de perfil">
                 </div>
             </ion-row>
             <ion-row>
-                <p class="username">{{usuario.alias}}</p>
+                <p class="username">{{resUsuario.alias}}</p>
             </ion-row>
         </ion-col>
         <ion-col size="4">
@@ -29,15 +29,15 @@
 
     <ion-row class="stats">
         <ion-col>
-            <p>20</p>
+            <p>{{resUsuario.seguidos}}</p>
             <p>Publicaciones</p>
         </ion-col>
         <ion-col>
-            <p>{{usuario.seguidores}}</p>
+            <p>{{resUsuario.seguidores}}</p>
             <p>Seguidores</p>
         </ion-col>
         <ion-col>
-            <p>{{usuario.seguidores}}</p>
+            <p>{{resUsuario.seguidos}}</p>
             <p>Siguiendo</p>
         </ion-col>
     </ion-row>
