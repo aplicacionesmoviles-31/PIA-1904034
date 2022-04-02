@@ -1,0 +1,19 @@
+.container {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100%;
+    height: auto;
+    animation: move-left 0.5s ease;
+}
+
+div {
+    background: rgb(253, 250, 255);
+}
+@keyframes move-left {
+    from {
+        transform: translateX(100%);
+    } to {
+        transform: translateX(0);
+    }
+}

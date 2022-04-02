@@ -5,10 +5,24 @@
     color: #333;
 }
 
+@keyframes move-right {
+    from {
+        transform: translateX(-100%);
+    } to {
+        transform: translateX(0);
+    }
+}
+
 ion-grid {
+    margin: 0;
     margin-top: 60px;
     background: rgb(253, 250, 255);
     overflow: scroll;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100%;
+    height: auto;
+    animation: move-right 0.5s ease;
 }
 
 body {
@@ -41,9 +55,9 @@ ion-col {
 
 .foto_container {
     background: linear-gradient(45deg, rgb(255, 113, 196), rgb(209, 94, 255));
-    width: 50px;
-    height: 50px;
-    border-radius: 25px;
+    width: 49px;
+    height: 49px;
+    border-radius: 24.5px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -56,7 +70,7 @@ ion-col {
     width: 45px;
     height: 45px;
     border-radius: 22.5px;
-    padding: 3px;
+    padding: 2px;
     background: #fff;
     display: flex;
     align-items: center;
@@ -72,7 +86,7 @@ ion-col {
 .points {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: right;
 }
 
 .publicacion_img {
@@ -137,11 +151,26 @@ ion-col {
     font-size: 1.2rem;
 }
 
+.publicacion_icons, .publicacion_icons ion-col {
+    height: 60px; 
+}
+
+.publicacion_icons ion-col ion-icon { 
+    font-size: 1.75rem;
+}
+
 .like {
     color: #ff3333;
     animation: bounce 0.5s ease;
 }
 
+ion-item ion-icon {
+    margin-right: 10px;
+}
+
+.danger-text {
+    color: #ff3333;
+}
 @keyframes bounce {
     0% {
         transform: scale(1);

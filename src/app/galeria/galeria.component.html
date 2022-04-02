@@ -1,7 +1,19 @@
-<ion-grid id="galeria">
-    <ion-row >
-        <ion-col *ngFor="let publicacion of usuario.publicaciones">
+<ion-grid>
+    <ion-row class="apartados">
+        <ion-col (click)="mostrarGaleria(true)" class="centrar-icono">
+            <ion-icon name="grid-outline"></ion-icon>
+        </ion-col>
+        <ion-col (click)="mostrarGaleria(false)" class="centrar-icono">
+            <ion-icon name="list-outline"></ion-icon>
+        </ion-col>
+    </ion-row>
+</ion-grid>
+<ion-grid id="galeria" *ngIf="galeria">
+    <ion-row>
+        <ion-col *ngFor="let publicacion of resGaleria">
             <img [src]="publicacion.imagen" alt="" class="galeria" [routerLink]="['/publicacion', publicacion.id]">
         </ion-col>
     </ion-row>
+</ion-grid>
+<ion-grid id="etiquetas" *ngIf="!galeria">
 </ion-grid>

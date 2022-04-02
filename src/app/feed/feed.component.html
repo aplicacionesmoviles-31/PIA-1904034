@@ -1,4 +1,9 @@
 <ion-grid>
+    <ion-row>
+        <ion-col size-md="10" offset-md="1">
+            <app-historias></app-historias>
+        </ion-col>
+    </ion-row>
     <div *ngFor="let publicacion of resPublicaciones">
         <ion-row class="info">
             <ion-col size="2">
@@ -6,30 +11,53 @@
                     <img src="{{publicacion.fotoPerfil}}" alt="" class="usuario_foto">
                 </div>
             </ion-col>
-            <ion-col size="9" class="usuario_nombre">
+            <ion-col size="8" class="usuario_nombre" routerLink="/perfil">
                 {{usuario.nombre}}
             </ion-col>
-            <ion-col class="points">
+            <ion-col size="2" class="points" id="icono---{{publicacion.id}}">
                 <ion-icon name="ellipsis-vertical"></ion-icon>
             </ion-col>
+            <ion-popover trigger="icono---{{publicacion.id}}" translucent="true">
+                <ng-template>
+                    <ion-list>
+                        <!--Items: Borrar, Ocultar, Denunciar-->
+                        <ion-item (click)="deletePost(publicacion.id)" class="danger">
+                            <ion-icon name="trash" slot="start" class="danger-text"></ion-icon>
+                            <ion-label>
+                                <strong class="danger-text">
+                                    Eliminar
+                                </strong>
+                            </ion-label>
+                        </ion-item>
+                        <ion-item>
+                            <ion-icon name="eye-off" slot="start"></ion-icon>
+                            Ocultar
+                        </ion-item>
+                        <ion-item>
+                            <ion-icon name="alert" slot="start"></ion-icon>
+                            Denunciar
+                        </ion-item>
+                    </ion-list>
+                </ng-template>
+            </ion-popover>
         </ion-row>
         <ion-row>
             <ion-col class="publicacion_img" [routerLink]="['/publicacion', publicacion.id]">
                 <img src="{{publicacion.imagen}}" alt="">
             </ion-col>
         </ion-row>
-        <ion-row>
-            <ion-col size="1" class="reaccion_icon" (click)="likePost(publicacion.like)">
+        <ion-row class="publicacion_icons">
+            <ion-col size="1.5" class="reaccion_icon" (click)="likePost(publicacion.like)">
                 <ion-icon name="heart-outline" *ngIf="!publicacion.like"></ion-icon>
                 <ion-icon name="heart" *ngIf="publicacion.like" class="like"></ion-icon>
             </ion-col>
-            <ion-col size="1" class="reaccion_icon">
+            <ion-col size="1.5" class="reaccion_icon">
                 <ion-icon name="chatbubbles-outline"></ion-icon>
             </ion-col>
-            <ion-col size="8.8" class="reaccion_icon">
+            <ion-col size="7.5" class="reaccion_icon">
                 <ion-icon name="share-outline"></ion-icon>
             </ion-col>
-            <ion-col size="1" class="reaccion_icon" (click)="bookmarkPost(publicacion.bookmark)"> 
+            <ion-col size="1.5" class="reaccion_icon" (click)="bookmarkPost(publicacion.bookmark)"> 
                 <ion-icon name="bookmark-outline" *ngIf="!publicacion.bookmark"></ion-icon>
                 <ion-icon name="bookmark" *ngIf="publicacion.bookmark" class="bookmark"></ion-icon>
             </ion-col>
@@ -48,7 +76,7 @@
                 <img src="{{usuario.fotoPerfil}}" class="comentario_perfil" alt="">
             </ion-col>
             <input type="text" [(ngModel)]="publicacion.comentario" class="comentario_input" placeholder="Escribe un comentario..." >
-            <button (click)="postComment(publicacion.comentario, publicacion)" class="comentario_btn">
+            <button (click)="publicarComentario(publicacion.comentario, publicacion.id)" class="comentario_btn">
                 <ion-icon name="send"></ion-icon>
             </button>
         </ion-row>

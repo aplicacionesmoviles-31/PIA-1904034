@@ -1,18 +1,38 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { FirebaseDbService } from './services/firebase-db.service';
+
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
-  title = 'Hola, mundo!';
-  grid = true;
-  ingles = false;
+export class AppComponent implements OnInit{
   
-  toggleGrid(): void {
-    this.grid = !this.grid;
+
+  constructor(private fb: FirebaseDbService){}
+
+  ngOnInit(): void {
+    this.getUsuario().subscribe(res => {
+      this.usuario = res.toString();
+    });
+    this.getFotoPerfil().subscribe(res => {
+      this.fotoPerfil = res.toString();
+    });
   }
 
-  
+  usuario : string = '';
+  fotoPerfil: string = '';
+
+  getUsuario() {
+    return this.fb.getUsuario()
+  }
+
+  getFotoPerfil() {
+    return this.fb.getFotoPerfil();
+  }
+
+  cerrarSesion() {
+    // WIP
+  }
 }

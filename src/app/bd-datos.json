@@ -5,7 +5,7 @@
         "imagen": "https://i.pinimg.com/originals/f9/13/57/f9135788c6aeeec438abb986f283936c.gif",
         "caption": "Awesome!",
         "comentario": "",
-        "id": "1",
+        "id": "0",
         "like": "",
         "bookmark": ""
     },
@@ -15,7 +15,7 @@
         "imagen": "https://media1.tenor.com/images/728b1bf7d68319216cc3d889d8d4464a/tenor.gif?itemid=14799468",
         "caption": "This is great!",
         "comentario": "",
-        "id": "2",
+        "id": "1",
         "like": "",
         "bookmark": ""
     },
@@ -25,9 +25,27 @@
         "imagen": "https://th.bing.com/th/id/R.42455498933d57e8af7156813472d0fa?rik=ZY14wlbzBPkQ%2bA&pid=ImgRaw&r=0",
         "caption": "Beautiful!",
         "comentario": "",
-        "id": "3",
+        "id": "2",
         "like": "",
         "bookmark": ""
+    }],
+    "historias": [{
+        "imagen": "https://media1.tenor.com/images/728b1bf7d68319216cc3d889d8d4464a/tenor.gif?itemid=14799468",
+        "id": "1",
+        "like": "",
+        "usuario": "DavJT"
+    },
+    {
+        "imagen": "https://th.bing.com/th/id/R.42455498933d57e8af7156813472d0fa?rik=ZY14wlbzBPkQ%2bA&pid=ImgRaw&r=0",
+        "id": "2",
+        "like": "",
+        "usuario": "Bazz"
+    },
+    {
+        "imagen": "https://i.pinimg.com/originals/f9/13/57/f9135788c6aeeec438abb986f283936c.gif",
+        "id": "3",
+        "like": "",
+        "usuario": "Angelspartan01"
     }],
     "usuario": {
         "nombre":"Azt3kCode",

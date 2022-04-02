@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+
+import { ActionSheetController } from '@ionic/angular';
+
 import swal from 'sweetalert';
 
 @Component({
@@ -10,7 +13,8 @@ import swal from 'sweetalert';
 export class BioComponent implements OnInit {
 
   constructor(
-    private http: HttpClient
+    private http: HttpClient,
+    private actionSheetController: ActionSheetController
   ) { }
 
   // Respuestas de la base de datos
@@ -41,6 +45,24 @@ export class BioComponent implements OnInit {
 
   enviarMensaje(): void {
     this.editandoMensaje = !this.editandoMensaje;
+  }
+
+  async createActionSheet() {
+    const actionSheet = await this.actionSheetController.create({
+      buttons: [
+        {
+          text: 'Cancelar',
+          role: 'cancel',
+          icon: 'close',
+        },
+        {
+          text: 'Bloquear usuario',
+          role: 'destructive',
+          icon: 'trash'
+        }
+      ]
+    });
+    await actionSheet.present();
   }
   
   enviar():void {

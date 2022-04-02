@@ -5,7 +5,7 @@
                 <img src="{{publicacionDetalle.fotoPerfil}}" alt="" class="usuario_foto">
             </div>
         </ion-col>
-        <ion-col size="9" class="usuario_nombre">
+        <ion-col size="9" class="usuario_nombre" routerLink="/perfil">
             {{usuario}}
         </ion-col>
         <ion-col class="points">
@@ -17,20 +17,20 @@
             <img src="{{publicacionDetalle.imagen}}" alt="">
         </ion-col>
     </ion-row>
-    <ion-row>
-        <ion-col size="1" class="reaccion_icon" (click)="likePost()">
-            <ion-icon name="heart-outline" *ngIf="!like"></ion-icon>
-            <ion-icon name="heart" *ngIf="like" class="like"></ion-icon>
+    <ion-row class="publicacion_icons">
+        <ion-col size="1.5" class="reaccion_icon" (click)="likePost(publicacionDetalle.like)">
+            <ion-icon name="heart-outline" *ngIf="!publicacion.like"></ion-icon>
+            <ion-icon name="heart" *ngIf="publicacionDetalle.like" class="like"></ion-icon>
         </ion-col>
-        <ion-col size="1" class="reaccion_icon">
+        <ion-col size="1.5" class="reaccion_icon">
             <ion-icon name="chatbubbles-outline"></ion-icon>
         </ion-col>
-        <ion-col size="8.8" class="reaccion_icon">
+        <ion-col size="7.5" class="reaccion_icon">
             <ion-icon name="share-outline"></ion-icon>
         </ion-col>
-        <ion-col size="1" class="reaccion_icon" (click)="bookmarkPost()"> 
-            <ion-icon name="bookmark-outline" *ngIf="!bookmark"></ion-icon>
-            <ion-icon name="bookmark" *ngIf="bookmark" class="bookmark"></ion-icon>
+        <ion-col size="1.5" class="reaccion_icon" (click)="bookmarkPost(publicacionDetalle.bookmark)"> 
+            <ion-icon name="bookmark-outline" *ngIf="!publicacionDetalle.bookmark"></ion-icon>
+            <ion-icon name="bookmark" *ngIf="publicacionDetalle.bookmark" class="bookmark"></ion-icon>
         </ion-col>
     </ion-row>
     <ion-row>

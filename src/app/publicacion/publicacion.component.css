@@ -9,6 +9,19 @@
     margin-top: 60px;
     background: rgb(253, 250, 255);
     overflow: scroll;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100%;
+    height: auto;
+    animation: move-up 0.5s ease;
+}
+
+@keyframes move-up {
+    from {
+        transform: translateY(-100%);
+    } to {
+        transform: translateY(0);
+    }
 }
 
 body {
@@ -136,6 +149,15 @@ ion-col {
     color: #fff;
     font-size: 1.2rem;
 }
+
+.publicacion_icons, .publicacion_icons ion-col {
+    height: 60px; 
+}
+
+.publicacion_icons ion-col ion-icon { 
+    font-size: 1.75rem;
+}
+
 
 .like {
     color: #ff3333;

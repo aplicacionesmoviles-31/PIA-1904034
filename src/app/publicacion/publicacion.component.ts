@@ -48,17 +48,14 @@ export class PublicacionComponent implements OnInit {
 
   usuario = 'Azt3kCode';
 
-  like = false;
-  bookmark = false;
-
-  likePost(): void {
-    this.like = !this.like;
+  likePost(id: string): void {
+    
   }
 
-  bookmarkPost(): void {
-    this.bookmark = !this.bookmark;
+  bookmarkPost(id: string): void {
+    
   }
-
+  
   @Input() comentario: string = '';
 
   postComment(comentario: string, publicacion: any): void {
