@@ -60,12 +60,14 @@ export class FirebaseDbService {
   }
 
   getStories() {
-    return this.http.get('https://insta-ionic-1904034-default-rtdb.firebaseio.com/usuario/historias.json');
+    return this.http.get('https://insta-ionic-1904034-default-rtdb.firebaseio.com/historias.json');
   }
  
-  postComment(comentario: string, publicacion: number) {
-    return this.http.put('https://insta-ionic-1904034-default-rtdb.firebaseio.com/publicaciones/' + publicacion + '/comentario.json', {
-      value: comentario
-    });
+  postComment(comentario: string, publicacion: number) {  
+    return this.http.patch(
+      'https://insta-ionic-1904034-default-rtdb.firebaseio.com/publicaciones/' + publicacion + '.json', {
+        comentario: comentario
+      }
+    );
   }
 }

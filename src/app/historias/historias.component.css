@@ -1,0 +1,20 @@
+ion-row {
+    padding: 10px 0;
+}
+
+ion-row:first-child {
+    margin-left: 10px;
+}
+
+ion-avatar {
+    width: 80px;
+    height: 80px;
+    padding: 2px;
+    background: linear-gradient(45deg, rgb(255, 113, 196), rgb(209, 94, 255));
+}
+
+img {
+    padding: 3px;
+    background: #fff;
+    border-radius: 50%;
+}

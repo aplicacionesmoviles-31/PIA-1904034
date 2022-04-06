@@ -1,17 +1,13 @@
 <ion-app>
   <ion-content>
     <router-outlet></router-outlet>
-    <ion-header>
-      <ion-toolbar>
-        <ion-row class="alinear">
-          <ion-col size="10">
-            <ion-title>
-              <strong>
-                {{usuario}}
-              </strong>
-            </ion-title>
-          </ion-col>
-          <ion-col size="2">
+    <header>
+      <nav>
+        <ul>
+          <li>
+            <a routerLink="/feed" class="name_app">Instafan</a>
+          </li>
+          <li>
             <ion-avatar>
               <ion-img [src]="fotoPerfil" id="avatar"></ion-img>
               <ion-popover trigger="avatar">
@@ -29,10 +25,10 @@
                 </ng-template>
               </ion-popover>
             </ion-avatar>
-          </ion-col>
-        </ion-row>
-      </ion-toolbar>
-    </ion-header>
+          </li>
+        </ul>
+      </nav>
+    </header>
     <app-tabs></app-tabs>
   </ion-content>
  </ion-app>
