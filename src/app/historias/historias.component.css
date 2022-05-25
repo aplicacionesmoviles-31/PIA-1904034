@@ -13,6 +13,10 @@ ion-avatar {
     background: linear-gradient(45deg, rgb(255, 113, 196), rgb(209, 94, 255));
 }
 
+ion-col {
+    margin: 0;
+}
+
 img {
     padding: 3px;
     background: #fff;

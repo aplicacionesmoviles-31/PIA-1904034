@@ -18,6 +18,10 @@ const routes: Routes = [
   { 
     path: 'publicacion/:id',
     component: PublicacionComponent,
+  },
+  {
+    path: '**',
+    redirectTo: 'feed',
   }
 ]
 

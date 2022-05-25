@@ -38,10 +38,6 @@ export class FeedComponent implements OnInit {
     this.getPublicaciones().subscribe(res => {
       this.resPublicaciones = res;
     });
-
-    this.data.subscribe(res => {
-      console.log(res);
-    })
   }
 
   //dataRef :  AngularFireList<any>;
@@ -49,7 +45,6 @@ export class FeedComponent implements OnInit {
 
   data: Observable<any>;
   //posts: Post = [];
-
 
   // Obtener las publicaciones
   getPublicaciones() {
